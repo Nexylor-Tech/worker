@@ -31,9 +31,11 @@ then :point_down:
 > run `uvicorn api:app --host 0.0.0.0 --port 5001 --reload` in a separate terminal for the api
 <details>
 <summary>Future implementation</summary>
-  - [ ] Multiple type of embeddings support
-  - [ ] Semantic search capabale embeddings
-  - [ ] Rewritten in GO
+
+- [ ] Multiple type of embeddings support
+- [ ] Semantic search capabale embeddings
+- [ ] Rewritten in GO
+
 </details>
 
 > [!WARNING]
