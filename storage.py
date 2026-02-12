@@ -1,5 +1,4 @@
 import boto3
-import io
 from botocore.config import Config as BotoConfig
 from config import Config
 
@@ -14,11 +13,12 @@ def get_S3_client():
     )
 
 
-def download_file_content(storage_key: str):
+def download_file_content(storage_key: str) -> str:
     s3 = get_S3_client()
     try:
-        res = s3.get_object(Bucket="cognexa_media_assets", Key=storage_key)
+        res = s3.get_object(Bucket="cognexa-media-assets", Key=storage_key)
         file_content = res["Body"].read()
         return file_content.decode("utf-8", errors="ignore")
     except Exception as e:
-        print(f"Failed to download file {storage_key}: {e}")
+        print(f"Failed to download {storage_key}: {e}")
+        raise e
