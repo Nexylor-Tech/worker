@@ -14,7 +14,7 @@ graph TD;
 
 # How to run
 >
-> First of all you need docker
+> First of all you need docker to use redis
 So run this in ur terminal
 
 ```
