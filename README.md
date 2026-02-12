@@ -5,11 +5,11 @@
 ```mermaid
 
 graph TD;
-  "Bun API (Render Web Service)"-->"Python Enqueue API (Render Web Service)";
-  "Python Enqueue API (Render Web Service)"-->"Managed Redis (Render Redis OR Upstash)";
-  "Managed Redis (Render Redis OR Upstash)"-->"Dramatiq Worker (Render Background Worker Service)";
-  "Dramatiq Worker (Render Background Worker Service)"-->"Managed Postgres (Render Postgres)";
-  "Managed Postgres (Render Postgres)"-->"Storage (S3 capable)"
+  A["Bun API (Render Web Service)"]-->B["Python Enqueue API (Render Web Service)"];
+  B["Python Enqueue API (Render Web Service)"]-->C["Managed Redis (Render Redis OR Upstash)"];
+  C["Managed Redis (Render Redis OR Upstash)"]-->D["Dramatiq Worker (Render Background Worker Service)"];
+  D["Dramatiq Worker (Render Background Worker Service)"]-->E["Managed Postgres (Render Postgres)"];
+  E["Managed Postgres (Render Postgres)"]-->F["Storage (S3 capable)"];
 ```
 
 # How to run
