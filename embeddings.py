@@ -14,7 +14,6 @@ def generate_embedding_batch(texts: list[str]) -> list[list[float]]:
         contents=texts,
         config=types.EmbedContentConfig(
             task_type="RETRIEVAL_DOCUMENT",
-            output_dimensionality=768,
         ),
     )
     embedding = result.embeddings
